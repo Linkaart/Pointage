@@ -1,23 +1,39 @@
-# Pointage
+# 🕒 Pointage
 
-📊 Pointage des Salariés - Application Web
-Une application web simple et efficace pour gérer les pointages des employés.
-Développée en Python avec le framework Streamlit, cette application permet aux employés de pointer leur arrivée et leur départ, et aux administrateurs de consulter et de gérer les données de pointage.
+Application web de pointage horaire des salariés, développée en Python avec **Streamlit**.
 
-🚀 Fonctionnalités
-Pointage des salariés : Les employés peuvent pointer leur arrivée et leur départ via une interface intuitive.
-Gestion des utilisateurs : Les administrateurs peuvent ajouter, modifier ou supprimer des utilisateurs.
-Consultation des pointages : Les administrateurs peuvent consulter les historiques de pointage des employés.
-Export des données : Exportez les données de pointage au format CSV ou Excel pour un traitement externe.
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
 
-🛠️ Technologies Utilisées
-Langage de programmation : Python 🐍
-Framework web : Streamlit 🌐
-Base de données : CSV 🗄️
-Gestion des dépendances : Pipenv ou pip 📦
+## Fonctionnalités
 
-🛠️ Installation
-Prérequis
-Python 3.7 ou supérieur
-Pipenv ou pip installé
-Streamlit 
+- Saisie du nom du salarié
+- **Pointage de l'arrivée** : enregistre la date et l'heure
+- **Pointage du départ** : complète la ligne d'arrivée du jour, avec message d'erreur si aucune arrivée n'a été pointée
+- **Historique** de tous les pointages affiché sous forme de tableau
+- Données persistées dans un fichier `pointage.csv` (créé automatiquement)
+
+## Stack technique
+
+- **Python** et **Streamlit** pour l'interface
+- **pandas** pour la lecture, la mise à jour et l'écriture du CSV
+
+## Lancer le projet
+
+```bash
+git clone https://github.com/Linkaart/Pointage.git
+cd Pointage
+pip install -r requirements.txt
+streamlit run point.py
+```
+
+L'application s'ouvre sur `http://localhost:8501`.
+
+Un fichier `.devcontainer` est fourni pour lancer le projet dans GitHub Codespaces.
+
+## Pistes d'amélioration
+
+- Authentification des salariés et espace administrateur
+- Export Excel et filtres par période
+- Calcul automatique des heures travaillées
